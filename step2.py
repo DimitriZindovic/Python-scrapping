@@ -35,4 +35,4 @@ def scrap_category(url):
   for j in range(len(all_a)):
       scrap_page_book(all_a[j])
 
-scrap_category("https://books.toscrape.com/catalogue/category/books/politics_48/index.html")
+scrap_category("https://books.toscrape.com/catalogue/category/books/mystery_3/index.html")

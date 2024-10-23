@@ -4,6 +4,7 @@ import os
 import requests
 
 def scrap_page_book(url):
+    directory_name = "images"
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
     csv_exist = os.path.isfile('books.csv')
@@ -41,7 +42,17 @@ def scrap_page_book(url):
         review_rating = soup.find('p', class_='star-rating')['class'][1]
 
         div = soup.find('div', class_='carousel-inner')
-        image_url = soup.find('img')['src']
+        image_search = soup.find('img')['src']
+        image_url = image_search.replace('../../', 'https://books.toscrape.com/')
+
+        directory_name = 'images'
+        if not os.path.exists(directory_name):
+            os.mkdir(directory_name)
+
+        image_filename = os.path.join(directory_name, os.path.basename(image_url))
+        response = requests.get(image_url)
+        with open(image_filename, mode='wb') as file:
+            file.write(response.content)
 
         writter.writerow([url, upc, title, price_exact_tax, price_incl_tax, availability, description, category, review_rating, image_url])
 
