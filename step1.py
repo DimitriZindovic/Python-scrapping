@@ -45,9 +45,6 @@ def scrap_page_book(url, csv_name):
         price_incl_tax = float(price_incl_tax_not_clean[1:])
         availability_not_clean = all_td[5]
         availability = int(''.join([caractere for caractere in availability_not_clean if caractere.isdigit()]))
-        print(type(availability))
-        print(type(price_incl_tax))
-        print(type(price_exact_tax))
 
         ul = soup.find('ul')
         a = ul.find_all('a')
