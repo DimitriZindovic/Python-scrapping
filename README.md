@@ -16,8 +16,6 @@ Pour Windows :
 python -m venv env
 ```
 
-````
-
 Pour macOS :
 
 ```bash
@@ -93,8 +91,3 @@ python step4.py
 ## Auteur :
 
 Dimitri Zindovic
-
-```
-
-```
-````
