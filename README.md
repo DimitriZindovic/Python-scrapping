@@ -84,6 +84,16 @@ Lancer :
 python step4.py
 ```
 
+#### **Phase 5** :
+
+- Après avoir collecté les données sur les prix des livres d'occasion via OldBooks Finder, l'étape suivante consiste à analyser ces informations pour en tirer des insights utiles. À l'aide de Matplotlib, vous allez visualiser la répartition des livres par catégorie sous forme de diagramme circulaire, ainsi que le prix moyen des livres par catégorie à l'aide d'un graphique en barres.
+
+Lancer :
+
+```bash
+python step5.py
+```
+
 ## Technologies :
 
 - Python
