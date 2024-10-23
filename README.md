@@ -1,6 +1,3 @@
-Voici le code en Markdown que j'ai utilisé :
-
-````markdown
 # Projet Scraping Python
 
 ### Rendu de cours Python
@@ -18,6 +15,7 @@ Pour Windows :
 ```bash
 python -m venv env
 ```
+
 ````
 
 Pour macOS :
@@ -99,3 +97,4 @@ Dimitri Zindovic
 ```
 
 ```
+````
